@@ -4,7 +4,7 @@
 
 An end-to-end data analytics project built from **44,302,480 Citi Bike rides started in 2024**, integrating trip history with historical weather data. The goal is to turn large-scale mobility data into interpretable findings for operations and mobility planning, with hourly demand forecasting as a future extension.
 
-> **Project status (October 2026):** Data acquisition and processing are published. All six exploratory analyses were completed and validated in the author's local notebook. The public `notebooks/02_eda_insights.ipynb` is still an empty placeholder and needs to be synchronized. The results and methodology are documented here and in [the Spanish EDA report](docs/EDA_FINDINGS_ES.md).
+> **Project status (October 2026):** Data acquisition, processing and the completed six-hypothesis EDA notebook are published. Results and methodology are summarized here and in [the Spanish EDA report](docs/EDA_FINDINGS_ES.md).
 
 ## At a glance
 
@@ -46,7 +46,7 @@ citi-bike-demand-intelligence/
 │   └── processed/            # Versioned analysis-ready CSVs
 ├── notebooks/
 │   ├── 01_data_acquisition_preparation.ipynb
-│   └── 02_eda_insights.ipynb # Public placeholder; complete local version pending sync
+│   └── 02_eda_insights.ipynb # Completed EDA, visualizations and conclusions
 ├── docs/
 │   └── EDA_FINDINGS_ES.md
 ├── requirements.txt
@@ -74,7 +74,7 @@ python -m pip install -r requirements.txt
 jupyter lab
 ```
 
-**Quick start:** Once the finished notebook 02 is synchronized, open `notebooks/02_eda_insights.ipynb` and run it against the versioned CSVs in `data/processed/`. It does not need to download the raw trip history again.
+**Quick start:** Open [`notebooks/02_eda_insights.ipynb`](notebooks/02_eda_insights.ipynb) and run it against the versioned CSVs in `data/processed/`. It does not need to download the raw trip history again.
 
 **Full reproduction:** Run `notebooks/01_data_acquisition_preparation.ipynb` to retrieve and prepare the raw Citi Bike and Open-Meteo data, then run notebook 02. This pipeline processes trip files in chunks rather than loading tens of millions of raw records into memory at once. Internet access is required for acquisition.
 
@@ -99,7 +99,7 @@ This study covers **one calendar year**, so recurring multi-year seasonality is 
 
 ## Next steps
 
-1. Synchronize the finished `02_eda_insights.ipynb` notebook to `main` and publish its plots.
+1. Use the published EDA notebook and its visualizations as the basis for the academic presentation and portfolio.
 2. Define an hourly forecasting horizon and information-availability assumptions.
 3. Evaluate time-aware baselines and regression models with chronological validation (MAE / RMSE).
 4. Test whether weather features improve on calendar-only baselines, without leaking future observed weather into predictions.
