@@ -1,6 +1,6 @@
 # Citi Bike Demand Intelligence — Hallazgos del EDA (2024)
 
-> Reporte de resultados analíticos a partir de la ejecución local del notebook `02_eda_insights.ipynb`. El notebook completo aún debe sincronizarse al repositorio público; el archivo actualmente publicado es un placeholder vacío.
+> Reporte de resultados analíticos a partir del notebook completo y publicado en [`notebooks/02_eda_insights.ipynb`](../notebooks/02_eda_insights.ipynb).
 
 ## Objetivo y fuentes
 
