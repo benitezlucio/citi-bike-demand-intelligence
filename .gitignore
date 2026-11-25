@@ -1,68 +1,37 @@
-# =========================
-# Data
-# =========================
-
-# Raw Citi Bike files can be very large
+# Datos originales voluminosos
 data/raw/*
 !data/raw/.gitkeep
 
-# Processed datasets ARE versioned
+# Datasets procesados del EDA: versionados deliberadamente.
+# Pronósticos GFS descargados en Etapa 03: caché regenerable,
+# NO se versiona para evitar datos duplicados / obsoletos.
+data/processed/citibike_gfs_previous_day1_2024.csv
 
-
-# =========================
-# Jupyter
-# =========================
-
+# Jupyter / Python
 .ipynb_checkpoints/
-
-
-# =========================
-# Python
-# =========================
-
 __pycache__/
 *.py[cod]
 *$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
 
-
-# =========================
-# Virtual environments
-# =========================
-
+# Entornos locales
 .venv/
 venv/
 env/
 
-
-# =========================
-# Environment / secrets
-# =========================
-
+# Configuración privada
 .env
 .env.*
 !.env.example
 
-
-# =========================
-# IDE
-# =========================
-
+# IDE / sistema / temporales
 .vscode/
 .idea/
-
-
-# =========================
-# OS
-# =========================
-
 .DS_Store
 Thumbs.db
-
-
-# =========================
-# Temporary files
-# =========================
-
 *.tmp
 *.temp
 *.log
