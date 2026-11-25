@@ -1,0 +1,27 @@
+name: ML notebook structural checks
+
+on:
+  pull_request:
+    paths:
+      - "notebooks/03_ml_hourly_demand_forecasting.ipynb"
+      - "entregas/coderhouse/Citi_Bike_Coderhouse_Entrega_ML.ipynb"
+      - "scripts/check_ml_notebooks.py"
+      - "requirements.txt"
+  push:
+    branches: [main]
+    paths:
+      - "notebooks/03_ml_hourly_demand_forecasting.ipynb"
+      - "entregas/coderhouse/Citi_Bike_Coderhouse_Entrega_ML.ipynb"
+      - "scripts/check_ml_notebooks.py"
+      - "requirements.txt"
+
+jobs:
+  static-notebook-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check notebook JSON, Python syntax, attachments and consistency
+        run: python scripts/check_ml_notebooks.py
